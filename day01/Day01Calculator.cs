@@ -11,7 +11,17 @@ namespace day01
         */
         public int Calculate(int[] inputNumbers)
         {
-            return 0;
+            int totalIncreasing = 0;
+            int lastNumber = int.MaxValue;
+            foreach (int number in inputNumbers)
+            {
+                if (number > lastNumber)
+                {
+                    totalIncreasing++;
+                }
+                lastNumber = number;
+            }
+            return totalIncreasing;
         }
     }
 }
