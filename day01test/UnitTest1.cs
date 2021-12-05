@@ -46,6 +46,15 @@ public class UnitTest1
         result.Should().Be(0);
     }
 
-    
+    [Fact] void TestMultipleNumbers()
+    {
+        var Day01Caclulator = new Day01Calculator();
+        var inputNumbers = new int[] { 1, 1, 5, 3, 5, 8 };
+
+        var result = Day01Caclulator.Calculate(inputNumbers);
+        result.Should().Be(3);
+    }
+
+
     
 }
