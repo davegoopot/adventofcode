@@ -1,0 +1,18 @@
+@using day01;
+<h3>Please enter the input from day one</h3>
+<textarea   type="textbox" name="day1" id="day1" placeholder="Enter the input from day one" @bind="Day1Input" />
+<button type="submit" @onclick="@CalculateDay1">Calculate</button>  
+<input type="text" name="day1result" id="day1result" placeholder="Result" @bind="Day1Result">
+
+@code
+{
+    private string? Day1Input;
+    private string? Day1Result;
+
+    public void CalculateDay1()
+    {
+        var day01Calculator = new Day01Calculator();
+        int[] input = Day1Input.Split('\n').Select(int.Parse).ToArray();
+        Day1Result = day01Calculator.Calculate(input).ToString();
+    }
+}
