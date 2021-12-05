@@ -25,4 +25,27 @@ public class UnitTest1
         var result = Day01Caclulator.Calculate(inputNumbers);
         result.Should().Be(1);
     }   
+
+    [Fact]
+    public void TestTwoNumbersDecreasing()
+    {
+        var Day01Caclulator = new Day01Calculator();
+        var inputNumbers = new int[] { 2, 1 };
+
+        var result = Day01Caclulator.Calculate(inputNumbers);
+        result.Should().Be(0);
+    }
+
+    [Fact]
+    public void TestTwoNumbersTheSame()
+    {
+        var Day01Caclulator = new Day01Calculator();
+        var inputNumbers = new int[] { 1, 1 };
+
+        var result = Day01Caclulator.Calculate(inputNumbers);
+        result.Should().Be(0);
+    }
+
+    
+    
 }
