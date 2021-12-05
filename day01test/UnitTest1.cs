@@ -55,6 +55,12 @@ public class UnitTest1
         result.Should().Be(3);
     }
 
+    [Fact] void TestEmptyInput()
+    {
+        var Day01Caclulator = new Day01Calculator();
+        var inputNumbers = new int[] { };
 
-    
+        var result = Day01Caclulator.Calculate(inputNumbers);
+        result.Should().Be(0);
+    }   
 }
